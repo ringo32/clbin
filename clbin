@@ -29,7 +29,8 @@ clbin() {
         }
         echo "^C to cancel, ^D to send."
     }
-    curl $opts -F f:1='<-' $* clbin.com/$id
+    curl $opts -F 'clbin<-' $* https://clbin.com
+    curl -F 'clbin=<-' https://clbin.com
 }
 
 clbin $*
